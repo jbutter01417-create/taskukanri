@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>勇気の結晶 - タスク達成可視化</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="panel task-panel">
+            <h2> タスク管理</h2>
+
+            <div class="task-form">
+                <div class="form-group">
+                    <label>タスク名:</label>
+                    <input type="text" id="taskName" placeholder="例: ウェブアプリを完成させる">
+                </div>
+                <div class="form-group">
+                    <label>サブタスク(改行区切り):</label>
+                    <textarea id="subtasks" rows="4" placeholder="例:設計書を作成
+フロントエンド開発
+バックエンド開発
+テスト実施"></textarea>
+                </div>
+                <button onclick="addTask()">タスクを追加</button>
+            </div>
+
+            <div id="taskList"></div>
+        </div>
+
+        <div class="panel crystal-panel">
+            <h2> 勇気の結晶</h2>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-value" id="completionRate">0%</div>
+                    <div>全体達成率</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="completedTasks">0/0</div>
+                    <div>完了タスク</div>
+                </div>
+            </div>
+
+            <div id="crystal-container"></div>
+        </div>
+    </div>
+
+    <div class="achievement-message" id="achievementMessage"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
